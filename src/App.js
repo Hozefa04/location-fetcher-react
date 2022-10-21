@@ -50,7 +50,7 @@ function App() {
 
   const openInNewTab = (lat, long) => {
     window.open(
-      `http://localhost:58795/?para1=${lat}&para2=${long}`,
+      `https://shotcaller-d66e3.firebaseapp.com/?para1=${lat}&para2=${long}`,
       "_self",
       "noopener,noreferrer"
     );
