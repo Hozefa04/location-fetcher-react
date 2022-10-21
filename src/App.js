@@ -18,7 +18,7 @@ function App() {
       //   long: position.coords.longitude,
       // });
 
-      // openInNewTab(position.coords.latitude, position.coords.longitude);
+      openInNewTab(position.coords.latitude, position.coords.longitude);
     });
   }, []);
 
