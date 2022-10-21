@@ -27,7 +27,7 @@ function App() {
   const openInNewTab = (lat, long) => {
     window.open(
       `https://location-demo.netlify.app?para1=${lat}&para2=${long}`,
-      "_blank",
+      "_self",
       "noopener,noreferrer"
     );
   };
