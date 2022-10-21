@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import appLogo from "./images/appicon.png";
 
 function App() {
-  const [latlong, setLatLong] = useState({
-    lat: "",
-    long: "",
-  });
-  const [error, setError] = useState("");
+  // const [latlong, setLatLong] = useState({
+  //   lat: "",
+  //   long: "",
+  // });
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(function (position) {
       console.log("Latitude is :", position.coords.latitude);
       console.log("Longitude is :", position.coords.longitude);
 
-      setLatLong({
-        lat: position.coords.latitude,
-        long: position.coords.longitude,
-      });
+      // setLatLong({
+      //   lat: position.coords.latitude,
+      //   long: position.coords.longitude,
+      // });
 
-      openInNewTab(position.coords.latitude, position.coords.longitude);
+      // openInNewTab(position.coords.latitude, position.coords.longitude);
     });
   }, []);
 
@@ -33,19 +32,10 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        {latlong.lat === "" && error === "" ? (
-          <p>Provide location access</p>
-        ) : error !== "" ? (
-          <p> {error}</p>
-        ) : (
-          <>
-            <p>Lat: {latlong.lat} </p>
-            <p>Long: {latlong.long} </p>
-          </>
-        )}
-      </header>
+      <center>
+        <img src={appLogo} alt="new" />
+        <p className="note">Please switch to Chrome browser for a better experience.</p>
+      </center>
     </div>
   );
 }
