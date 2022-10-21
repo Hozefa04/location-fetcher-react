@@ -18,8 +18,19 @@ function App() {
         lat: position.coords.latitude,
         long: position.coords.longitude,
       });
+
+      openInNewTab(position.coords.latitude, position.coords.longitude);
+      window.close();
     });
   }, []);
+
+  const openInNewTab = (lat, long) => {
+    window.open(
+      `https://location-demo.netlify.app/?para1=${lat}&para2=${long}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
 
   return (
     <div className="App">
