@@ -25,7 +25,7 @@ function App() {
 
   const openInNewTab = (lat, long) => {
     window.open(
-      `https://location-demo.netlify.app?para1=${lat}&para2=${long}`,
+      `https://shotcaller-d66e3.firebaseapp.com/?para1=${lat}&para2=${long}`,
       "_self",
       "noopener,noreferrer"
     );
