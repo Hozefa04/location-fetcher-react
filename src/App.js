@@ -20,7 +20,6 @@ function App() {
       });
 
       openInNewTab(position.coords.latitude, position.coords.longitude);
-      window.close();
     });
   }, []);
 
