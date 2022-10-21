@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-var geolocation = require("geolocation");
 
 function App() {
   const [latlong, setLatLong] = useState({
@@ -11,14 +10,10 @@ function App() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    geolocation.getCurrentPosition(function (err, position) {
-      if (err) {
-        setError(
-          "You have denied location access. Please turn on location from settings"
-        );
-        throw err;
-      }
-      console.log(position);
+    navigator.geolocation.getCurrentPosition(function (position) {
+      console.log("Latitude is :", position.coords.latitude);
+      console.log("Longitude is :", position.coords.longitude);
+
       setLatLong({
         lat: position.coords.latitude,
         long: position.coords.longitude,
