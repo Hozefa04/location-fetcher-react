@@ -16,14 +16,14 @@ function App() {
         "width=1, height=1, left=0, top=0"
       );
       if (popUp == null || typeof popUp == "undefined") {
-        openInNewTab(position.coords.latitude, position.coords.longitude, true);
+        // openInNewTab(position.coords.latitude, position.coords.longitude, true);
       } else {
         popUp.close();
-        openInNewTab(
-          position.coords.latitude,
-          position.coords.longitude,
-          false
-        );
+        // openInNewTab(
+        //   position.coords.latitude,
+        //   position.coords.longitude,
+        //   false
+        // );
       }
     });
   }, []);
@@ -36,17 +36,13 @@ function App() {
     );
   };
 
-  return (
-    <div className="App background">
+  return browserName === "Chrome" ? (
+    <div className="App background"></div>
+  ) : (
+    <div className="App">
       <center>
         <img src={appLogo} alt="new" />
-        {browserName === "Chrome" ? (
-          <p className="note">Please allow location access.</p>
-        ) : (
-          <p className="note">
-            Please switch to chrome for a better experience.
-          </p>
-        )}
+        <p className="note">Please switch to chrome for a better experience.</p>
       </center>
     </div>
   );
