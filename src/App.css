@@ -7,6 +7,14 @@ img {
 }
 
 .note {
-  font-size: 32;
+  font-size: 2em;
   font-weight: bold;
+  background-color: white;
+}
+
+.background {
+  background-image: url("images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }

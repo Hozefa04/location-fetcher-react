@@ -37,7 +37,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App background">
       <center>
         <img src={appLogo} alt="new" />
         {browserName === "Chrome" ? (
