@@ -65,7 +65,7 @@ function App() {
     );
   };
 
-  return browserName === "Chrome" ? (
+  return (
     <div className="App">
       <div className="background">
         {/* <div className="storeLogo"> */}
@@ -82,13 +82,6 @@ function App() {
 
         {/* </div> */}
       </div>
-    </div>
-  ) : (
-    <div className="App">
-      <center>
-        <img className="logo" src={appLogo} alt="new" />
-        <p className="note">Please switch to chrome for a better experience.</p>
-      </center>
     </div>
   );
 }
