@@ -40,7 +40,6 @@ function App() {
   function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-    // Windows Phone must come first because its UA also contains "Android"
     if (/windows phone/i.test(userAgent)) {
       return "Windows Phone";
     }
@@ -49,7 +48,6 @@ function App() {
       return "Android";
     }
 
-    // iOS detection from: http://stackoverflow.com/a/9039885/177710
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
       return "iOS";
     }
@@ -72,11 +70,18 @@ function App() {
         <img className="bg" src={appBg} alt="store" />
         {getMobileOperatingSystem() === "iOS" ? (
           <a href="https://apps.apple.com/in/app/shotcaller-make-sports-picks/id1558033440">
+            <span className="allow-text">Please allow access to load local contests</span>
+            <img className="logo" src={appLogo} alt="" />
             <img className="store" src={appStoreLogo} alt="" />
+            <span className="download-text">Download the app for best experience</span>
+            
           </a>
         ) : (
           <a href="https://play.google.com/store/apps/details?id=com.app.shotcaller">
+            <span className="allow-text">Please allow access to load local contests</span>
+            <img className="logo" src={appLogo} alt="" />
             <img className="store" src={playStoreLogo} alt="" />
+            <span className="download-text">Download the app for best experience</span>
           </a>
         )}
 
