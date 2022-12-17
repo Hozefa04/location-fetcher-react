@@ -74,7 +74,7 @@ function App() {
             <span className="allow-text">Please allow location permission & popup to load games</span>
             <img className="logo" src={appLogo} alt="" />
             <img className="store" src={appStoreLogo} alt="" />
-            <span className="download-text">Download the app for best experience</span>
+            <span className="download-text">Download app for best experience</span>
 
           </a>
         ) : (
@@ -83,7 +83,7 @@ function App() {
             {/*<span className="allow-text">Refresh browser & allow location permission & popups to load games</span>*/}
             <img className="logo" src={appLogo} alt="" />
             <img className="store" src={playStoreLogo} alt="" />
-            <span className="download-text">Download the app for best experience</span>
+            <span className="download-text">Download app for best experience</span>
           </a>
         )}
 
