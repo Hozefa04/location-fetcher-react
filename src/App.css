@@ -20,7 +20,7 @@
   flex-direction: column;
   justify-content: flex-end;
 }
-/* 
+/*
 .storeLogo img {
   width: 200px;
   margin-bottom: 48px;
@@ -45,7 +45,9 @@
 
 .logo {
   position: absolute;
-  top: 25%;
+  height: 150px;
+  width: 150px;
+  top: 22%;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -61,7 +63,7 @@
   margin-right: auto;
   background-color: white;
   color: gray;
-  font-weight: 500;
+  font-weight: 700;
   padding: 12px;
   font-size: 22px;
 }
@@ -77,5 +79,5 @@
   color: black;
   font-weight: 700;
   padding: 12px;
-  font-size: 28px;
+  font-size: 22px;
 }
