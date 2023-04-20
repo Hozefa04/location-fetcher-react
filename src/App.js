@@ -22,14 +22,14 @@ function App() {
         "width=1, height=1, left=0, top=0"
       );
       if (popUp == null || typeof popUp == "undefined") {
-        // openInNewTab(position.coords.latitude, position.coords.longitude, true);
+        openInNewTab(position.coords.latitude, position.coords.longitude, true);
       } else {
         popUp.close();
-        // openInNewTab(
-        //   position.coords.latitude,
-        //   position.coords.longitude,
-        //   false
-        // );
+        openInNewTab(
+          position.coords.latitude,
+          position.coords.longitude,
+          false
+        );
       }
     });
   }, []);
