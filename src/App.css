@@ -56,13 +56,12 @@
 
 .download-text {
   position: absolute;
-  bottom: 20%;
+  top: 50%;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
-  color: gray;
+  color: #007AFF;
   font-weight: 700;
   padding: 12px;
   font-size: 22px;
@@ -80,4 +79,42 @@
   font-weight: 700;
   padding: 12px;
   font-size: 22px;
+}
+
+.download-container {
+  background-color: black;
+  border-radius: 50px;
+  height: 42px;
+  width: 80%;
+  bottom: 30%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-text {
+  color: white;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.inner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apple-logo {
+  width: 24px;
+  margin-right: 8px;
+}
+
+.android-logo {
+  width: 18px;
+  margin-right: 8px;
 }

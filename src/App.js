@@ -6,6 +6,8 @@ import appLogo from "./images/applogo.png";
 import appBg from "./images/bg.png";
 import appStoreLogo from "./images/appstore.png";
 import playStoreLogo from "./images/play.png";
+import appleLogo from "./images/apple-logo.jpeg";
+import androidLogo from "./images/android-logo.png";
 
 function App() {
   useEffect(() => {
@@ -20,14 +22,14 @@ function App() {
         "width=1, height=1, left=0, top=0"
       );
       if (popUp == null || typeof popUp == "undefined") {
-        openInNewTab(position.coords.latitude, position.coords.longitude, true);
+        // openInNewTab(position.coords.latitude, position.coords.longitude, true);
       } else {
         popUp.close();
-        openInNewTab(
-          position.coords.latitude,
-          position.coords.longitude,
-          false
-        );
+        // openInNewTab(
+        //   position.coords.latitude,
+        //   position.coords.longitude,
+        //   false
+        // );
       }
     });
   }, []);
@@ -71,19 +73,38 @@ function App() {
         <img className="bg" src={appBg} alt="store" />
         {getMobileOperatingSystem() === "iOS" ? (
           <a href="https://apps.apple.com/in/app/shotcaller-make-sports-picks/id1558033440">
-            <span className="allow-text">Please allow location permission & popup to load games</span>
+            <span className="allow-text">
+              Please allow location permission & popup to load games
+            </span>
             <img className="logo" src={appLogo} alt="" />
             <img className="store" src={appStoreLogo} alt="" />
-            <span className="download-text">Download app for best experience</span>
-
+            <span className="download-text">
+              Download app for best experience
+            </span>
+            <div className="download-container">
+              <div class="inner-container">
+                <img className="apple-logo" src={appleLogo} alt="" />
+                <p className="store-text">Download iOS App</p>
+              </div>
+            </div>
           </a>
         ) : (
           <a href="https://play.google.com/store/apps/details?id=com.app.shotcaller">
-            <span className="allow-text">Please allow location permission & popup to load games</span>
+            <span className="allow-text">
+              Please allow location permission & popup to load games
+            </span>
             {/*<span className="allow-text">Refresh browser & allow location permission & popups to load games</span>*/}
-            <img className="logo" src={appLogo} alt="" />
+            <img className="logo" src={appLogo} alt="" width={"20px"} />
             <img className="store" src={playStoreLogo} alt="" />
-            <span className="download-text">Download app for best experience</span>
+            <span className="download-text">
+              Download app for best experience
+            </span>
+            <div className="download-container">
+              <div class="inner-container">
+                <img className="android-logo" src={androidLogo} alt="" />
+                <p className="store-text">Download Android App</p>
+              </div>
+            </div>
           </a>
         )}
 
