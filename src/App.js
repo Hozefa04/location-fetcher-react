@@ -80,7 +80,7 @@ function App() {
 
   const openInNewTab = (lat, long, popup) => {
     window.open(
-      `https://now.playshotcaller.com/?para1=${lat}&para2=${long}&browserName=${browserName}&isPopupBlocked=${popup}`,
+      `https://now.playshotcaller.com/?para1=${lat}&para2=${long}&browserName=${browserName}&isPopupBlocked=${popup}&isGlobal=false`,
       "_self",
       "noopener,noreferrer"
     );
