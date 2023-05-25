@@ -102,10 +102,10 @@ function App() {
         {getMobileOperatingSystem() === "iOS" ? (
           <a href="https://apps.apple.com/in/app/shotcaller-make-sports-picks/id1558033440">
             <span className="allow-text">
-              Please allow location permission & popup to load games
+              To Play Games, allow location permission
             </span>
             <img className="logo" src={appLogo} alt="" />
-            <img className="store" src={appStoreLogo} alt="" />
+            {/* <img className="store" src={appStoreLogo} alt="" />
             <span className="download-text">
               Download app for best experience
             </span>
@@ -114,16 +114,16 @@ function App() {
                 <img className="apple-logo" src={appleLogo} alt="" />
                 <p className="store-text">Download iOS App</p>
               </div>
-            </div>
+            </div> */}
           </a>
         ) : (
           <a href="https://play.google.com/store/apps/details?id=com.app.shotcaller">
             <span className="allow-text">
-              Please allow location permission & popup to load games
+            To Play Games, allow location permission
             </span>
             {/*<span className="allow-text">Refresh browser & allow location permission & popups to load games</span>*/}
             <img className="logo" src={appLogo} alt="" width={"20px"} />
-            <img className="store" src={playStoreLogo} alt="" />
+            {/* <img className="store" src={playStoreLogo} alt="" />
             <span className="download-text">
               Download app for best experience
             </span>
@@ -132,7 +132,7 @@ function App() {
                 <img className="android-logo" src={androidLogo} alt="" />
                 <p className="store-text">Download Android App</p>
               </div>
-            </div>
+            </div> */}
           </a>
         )}
 
