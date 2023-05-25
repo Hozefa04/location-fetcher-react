@@ -4,10 +4,11 @@ import { browserName } from "react-device-detect";
 // import appLogo from "./images/appicon.png";
 import appLogo from "./images/applogo.png";
 import appBg from "./images/bg.png";
-import appStoreLogo from "./images/appstore.png";
-import playStoreLogo from "./images/play.png";
-import appleLogo from "./images/apple-logo.jpeg";
-import androidLogo from "./images/android-logo.png";
+// import appStoreLogo from "./images/appstore.png";
+// import playStoreLogo from "./images/play.png";
+// import appleLogo from "./images/apple-logo.jpeg";
+// import androidLogo from "./images/android-logo.png";
+import header from "./images/header.png";
 
 function App() {
   useEffect(() => {
@@ -104,6 +105,7 @@ function App() {
             <span className="allow-text">
               To Play Games, allow location permission
             </span>
+            <img className="header" src={header} alt="store" />
             <img className="logo" src={appLogo} alt="" />
             {/* <img className="store" src={appStoreLogo} alt="" />
             <span className="download-text">
@@ -122,6 +124,7 @@ function App() {
             To Play Games, allow location permission
             </span>
             {/*<span className="allow-text">Refresh browser & allow location permission & popups to load games</span>*/}
+            <img className="header" src={header} alt="store" />
             <img className="logo" src={appLogo} alt="" width={"20px"} />
             {/* <img className="store" src={playStoreLogo} alt="" />
             <span className="download-text">

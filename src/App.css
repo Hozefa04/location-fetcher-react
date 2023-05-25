@@ -33,6 +33,16 @@
   left: 0; */
 }
 
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .store {
   position: absolute;
   width: 150px;
@@ -69,7 +79,7 @@
 
 .allow-text {
   position: absolute;
-  top: 0%;
+  top: 5%;
   left: 0;
   right: 0;
   margin-left: auto;
