@@ -17,43 +17,51 @@ function App() {
         console.log("Latitude is :", position.coords.latitude);
         console.log("Longitude is :", position.coords.longitude);
 
-        var popUp = checkPopup();
-        if (popUp == null || typeof popUp == "undefined") {
-          openInNewTab(
-            position.coords.latitude,
-            position.coords.longitude,
-            true
-          );
-        } else {
-          popUp.close();
-          openInNewTab(
-            position.coords.latitude,
-            position.coords.longitude,
-            false
-          );
-        }
+        // var popUp = checkPopup();
+        // if (popUp == null || typeof popUp == "undefined") {
+        //   openInNewTab(
+        //     position.coords.latitude,
+        //     position.coords.longitude,
+        //     true
+        //   );
+        // } else {
+        //   popUp.close();
+        //   openInNewTab(
+        //     position.coords.latitude,
+        //     position.coords.longitude,
+        //     false
+        //   );
+        // }
+
+        openInNewTab(
+          position.coords.latitude,
+          position.coords.longitude,
+          false
+        );
       },
       function (error) {
-        var popUp = checkPopup();
+        // var popUp = checkPopup();
 
-        if (popUp == null || typeof popUp == "undefined") {
-          openInNewTabNoLocation(true);
-        } else {
-          popUp.close();
-          openInNewTabNoLocation(false);
-        }
+        // if (popUp == null || typeof popUp == "undefined") {
+        //   openInNewTabNoLocation(true);
+        // } else {
+        //   popUp.close();
+        //   openInNewTabNoLocation(false);
+        // }
+
+        openInNewTabNoLocation(false);
       }
     );
   }, []);
 
-  const checkPopup = () => {
-    var windowName = "popup check";
-    return window.open(
-      "http://www.google.in",
-      windowName,
-      "width=1, height=1, left=0, top=0"
-    );
-  };
+  // const checkPopup = () => {
+  //   var windowName = "popup check";
+  //   return window.open(
+  //     "http://www.google.in",
+  //     windowName,
+  //     "width=1, height=1, left=0, top=0"
+  //   );
+  // };
 
   /**
    * Determine the mobile operating system.
@@ -121,7 +129,7 @@ function App() {
         ) : (
           <a href="https://play.google.com/store/apps/details?id=com.app.shotcaller">
             <span className="allow-text">
-            To Play Games, allow location permission
+              To Play Games, allow location permission
             </span>
             {/*<span className="allow-text">Refresh browser & allow location permission & popups to load games</span>*/}
             <img className="header" src={header} alt="store" />
